@@ -10,7 +10,7 @@ period_name=[item.find('p',class_="period-name").get_text() for item in data_con
 short_desc=[item.find('p',class_="short-desc").get_text() for item in data_container]
 temp=[item.find('p',class_="temp").get_text() for item in data_container]
 
-df=pd.DataFrame(
+        df=pd.DataFrame(
     {
     'period_name':period_name,
     'short_desc':short_desc,
@@ -18,3 +18,11 @@ df=pd.DataFrame(
     })
 print(df)
 df.to_csv('weather.csv')
+
+
+# from selenium import webdriver
+# import time
+# browser=webdriver.Chrome()
+# browser.get('http://google.com/')
+# time.sleep('5')
+# browser.quit()
