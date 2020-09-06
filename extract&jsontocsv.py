@@ -4,7 +4,7 @@ import pandas as pd
 
 link=requests.get("https://www.allrecipes.com/").text
 soup=BeautifulSoup(link,'html.parser')
-data_container=soup.find_all(class_='recipeCard__imageLink',href=True,limit=3)
+data_container=soup.find_all(class_='recipeCard__imageLink',href=True,limit=10)
 href=[item['href'] for item in data_container]
 
 Recipi_id,ingrediant_section,cooking_instruction=[],[],[]
