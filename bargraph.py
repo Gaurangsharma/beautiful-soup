@@ -1,5 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
+import pandas as pd 
+from matplotlib import pyplot as plt 
 
 # from selenium import webdriver
 
@@ -29,3 +31,10 @@ for i in href:
     dishes_count.append(len(cuisine_data))
 
 print(dishes_count)
+plt.bar(cuisine_name, dishes_count, color ='maroon',  
+        width = 0.4) 
+  
+plt.xlabel("Cusine Name") 
+plt.ylabel("No. of dishes") 
+plt.title("Cusine Details") 
+plt.show() 
