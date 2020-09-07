@@ -1,6 +1,8 @@
-# f=open('test.json')
+# import json
+# from matplotlib import pyplot as plt
+
+# f=open('train.json')
 # data=json.load(f)
-# print(data)
 # cuisine_name, dishes_count=[],[]
 # for i in range(len(data)):
 #     cuisine_name.append(data[i]['cuisine'])
